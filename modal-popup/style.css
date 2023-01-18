@@ -1,0 +1,120 @@
+/* CSS Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+
+    --bg-color: #eef3f9;
+    --primary: #20225d;
+    --primary-light: #2f316e;
+    --text-alternate: white;
+    --text-primary: black; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.modal-box {
+    width: 500px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: var(--primary);
+    color: var(--text-alternate);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.modal-header i {
+    width: fit-content;
+    margin: 10px;
+    border-radius: 100%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.modal-header i:hover {
+    background-color: var(--primary-light);
+    transition: ease-in 0.2s;
+}
+
+.modal-header h1 {
+    align-self: center;
+    margin: 10px;
+}
+
+.modal-box form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+}
+
+.field-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.field-box input, .field-box select {
+    border: none;
+    border-bottom: 1px solid gray;
+    line-height: 2;
+    font-size: 0.8rem;
+}
+
+.field-box input:focus, .field-box select:focus {
+    outline: none;
+}
+
+.field-box label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: capitalize;
+}
+
+select {
+    appearance: none;
+}
+
+.field-box .material-symbols-outlined {
+    width: fit-content;
+    position: relative;
+    left: 100%;
+    bottom: 26px;
+    transform: translate(-100%, 0);
+}
+
+.submit-btn-box {
+    text-align: center;
+}
+
+.submit-btn-box input[type="submit"] {
+    padding: 20px 70px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 30px gray;
+    border: none;
+    background-color: var(--primary);
+    color: var(--text-alternate);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
